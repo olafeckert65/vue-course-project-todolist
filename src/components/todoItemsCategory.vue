@@ -1,10 +1,10 @@
 <script setup>
-
+defineProps(["title", "todoItem"]);
 </script>
 
 <template>
-    <h3 class="category-title">Title</h3>
-    <p style="Color: white">List of todo items of this category</p>    
+    <h3 class="category-title">{{title}}</h3>
+    <p style="color: white">{{todoItem}}</p>    
 </template>
 
 <style scoped>

@@ -1,4 +1,5 @@
 <script setup>
+import todoItemsCategory from "./components/todoItemsCategory.vue";
 import { v4 as uuidv4 } from "uuid";
 import { computed, ref } from "vue";
 
@@ -32,11 +33,8 @@ const todoItemsDone = computed(() => {
   <header class="colored-header"></header>
   <main>
     <h1 id="title">Todolist</h1>
-    <p style="color: white">Upcoming Todo Items: {{ todoItemsNotDone }}</p>
-    <p style="color: white">Done Todo Items: {{ todoItemsDone }}</p>
-    <todo-items-catgory />
-    <todo-items-catgory />
-    
+    <todoItemsCategory title="Upcoming" :todo-item="todoItemsNotDone"/>
+    <todoItemsCategory title="Done" :todo-item="todoItemsDone"/>
   </main>
 </template>
 
