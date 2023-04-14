@@ -34,6 +34,9 @@ const todoItemsDone = computed(() => {
     <h1 id="title">Todolist</h1>
     <p style="color: white">Upcoming Todo Items: {{ todoItemsNotDone }}</p>
     <p style="color: white">Done Todo Items: {{ todoItemsDone }}</p>
+    <todo-items-catgory />
+    <todo-items-catgory />
+    
   </main>
 </template>
 
